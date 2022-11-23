@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Thomas Moreau"/>
+        <link rel='stylesheet' type='text/css' href="horloge.css"/>
+        <title>Horloge</title>
+        <link rel="icon" href="media/pdp.jpg">
+        <script src="dateHeure.js"></script>
+    </head>
+
+    <body>
+        <!--Date et Heure-->
+        <div id="date">
+            <span id="date_heure"></span>
+            <script>window.onload = date_heure('date_heure');</script>
+            <canvas id="canvas_horloge" width="200" height="200" style="background-color:#333"></canvas>
+        </div>
+        <!--Fin Date et Heure-->
+        <script src="horloge.js"></script>
+    </body>
+</html>
