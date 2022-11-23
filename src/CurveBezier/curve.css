@@ -1,0 +1,91 @@
+body{
+    background-color:grey;
+}
+
+h1{
+    text-align: center;
+    border-radius: 100px;
+    border: solid rgb(0, 128, 38);
+    padding: 10px 0px 10px 0px;
+    width: 35%; 
+    margin: 10px auto;
+}
+
+canvas{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 800px;
+    background-color: #f0f0f0;
+    margin-top: 20px;
+    border: 3px solid green;
+    border-radius: 10px;
+}
+
+button{
+    display: block;
+    padding: 0;
+    margin: auto;
+    width: 200px;
+}
+
+#play-btn{
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    background-color: #ff0000;
+    color: white;
+    font-size: 30px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#play-btn:hover{
+    background-color: #e60000;
+}
+
+#play-btn:focus{
+    box-shadow: 0 0 0 4px rgba(179, 0, 0, 0.5);
+}
+
+#speed-slider{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+#speed-slider p{
+    margin: 0;
+}
+
+#slider{
+    margin-top: 10px;
+    appearance: none;
+    width: 300px;
+    border-radius: 5px;
+    height: 25px;
+    background: white;
+    outline: none;
+}
+
+#slider::-webkit-slider-thumb{
+    appearance: none;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #ff0000;
+    cursor: pointer;
+}
+
+#slider::-moz-range-thumb{
+    width: 25px;
+    border: none;
+    height: 25px;
+    border-radius: 50%;
+    background: #ff0000;
+    cursor: pointer;
+}

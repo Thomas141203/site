@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="author" content="Thomas Moreau"/>
+        <link rel="icon" href="../../media/pdp.jpg"/>
+        <title>Canvas</title>
+        <link rel="stylesheet" type="text/css" href="curve.css"/>
+    </head>
+
+	<body>
+        <h1 id="titre">Moving Objects On Bezier Curve</h1>
+
+        <canvas id="canvas" width="800" height="500"></canvas>
+        <div class="bouton">
+            <button id="play-btn">Play</button>
+            <div id="speed-slider">
+                <p>Speed <span id="slider-text">50</span></p>
+                <input type="range" min="1" max="10" value="2" id="slider" />
+            </div>
+        </div>
+        <br/>
+        <script src="curve.js"></script>
+	</body>
+</html>
