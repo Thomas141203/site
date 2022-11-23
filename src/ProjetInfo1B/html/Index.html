@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+		<meta name="author" content="Thomas Moreau et Louise Murarasu"/>
+        <link rel="stylesheet" type="text/css" href="../css/NavHeure.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/Index.css"/>
+        <script src="../javascript/date_heure.js"></script>
+        <title>Index</title>
+    </head>
+    <body>
+        <!--Nav Bar-->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="Formulaire.html#contact">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <span class="text">Contact</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon" onclick="history.back()"><ion-icon name="arrow-back-circle-outline"></ion-icon></span>
+                        <span class="text">Retour</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="active" ><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon" onclick="window.history.go(1);"><ion-icon name="arrow-forward-circle-outline">></ion-icon></span>
+                        <span class="text">Prochain</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <!--Fin Nav Bar-->
+        
+        <!--Presentation-->
+        <div id="hautdepage">
+            <div id="titre">
+                <video autoplay loop muted>
+                    <source src="../media/IndexFond.mp4">
+                </video>
+                <div id="content">
+                    <h1>TOTO et LOULOU</h1>
+                </div>
+            </div>
+            <div id="presentation">
+                <h1>Présentation</h1>
+                <hr>
+                <p>
+					( Le texte qui suit a été rédigé le 4 décembre 2021 à 13h42 et j'ai très faim.)
+					<br/>
+					En résumé, qui sommes nous? Louise, 18 ans, née le 10 décembre 2002 et, Thomas, 18 ans également, né le 13 juillet 2003. 
+					<br/>
+					Nous venons tous les deux de Paris et nous sommes désormais étudiants en L1 en MI-E (Maths-Informatique-Électronique) à l'Université de Bourgogne, à Dijon.
+					<br/>
+					Ce que nous aimons et ce que nous aimons pas ne vous regarde pas, des projets pour l'avenir, nous n'en avons pas et nos loisirs sont divers et variés! (Malgré tout, vous pouvez retrouver toutes nos passions sur ce site et prendre note de nos gouts exceptionnels!)
+					<br/>
+					En gros, on aime l'informatique et on apprend à jouer avec, donc voici notre essai!	
+					</p>
+                <hr>
+            </div>
+        </div>
+        <!--Fin Presentation-->
+
+        <!--Sommaire-->
+        <div class="cadresommaire">
+            <h1>Sommaire de nos goûts super géniaux</h1>
+            <ul>
+                <li class="sommaire">
+                    <div class="box">
+                        <a href="JeuxVideos.html"><img src="../media/icone_jeux_videos.jpeg" width="200" height="200" class="icone" alt="icone de jeux vidéos "></a>
+                        <div class="fadebox">
+                            <div class="title texte">Vous voulez savoir à quoi nous jouons? Sur quels jeux on passe nos journées? Nos personnages préférés et nos classement? Alors cliquez vite!</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="sommaire">
+                    <div class="box">
+                        <a href="Musique.html"><img src="../media/icone_musique.jpg" width="200" height="200" class="icone" alt="icone de musique"></a>
+                        <div class="fadebox">
+                            <div class="title texte">Envie de calme et de détente sur de douces musiques? Eh bien, malheuresement ce n'est pas ici que vous trouverez mais nous avons quand même de super gouts musicaux qui vous donnerons la pêche pour passer une excellente journée!</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="sommaire">
+                    <div class="box">
+                        <a href="AnimeManga.html"><img src="../media/icone_anime.jpeg" width="200" height="200" class="icone" alt="icone anime et manga"></a>
+                        <div class="fadebox">
+                            <div class="title texte">Encore une catégorie qui vous détournera de votre travail mais ne vous inquietez pas vous apprendrez quand même de nombreuses choses!... Surement...</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="sommaire">
+                    <div class="box">
+                        <a href="Canvas.html"><img src="../media/icone_canvas.jpg" width="200" height="200" class="icone" alt="icone de canvas"></a>
+                        <div class="fadebox">
+                            <div class="title texte">Bah ça, c'est parce qu'on devait le faire donc on l'a fait puis c'est drôle les jolis dessins que l'on peut faire</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="sommaire">
+                    <div class="box">
+                        <a href="Formulaire.html"><img src="../media/icone_formulaire.png" width="200" height="200" class="icone" alt="icone de formulaire"></a>
+                        <div class="fadebox">
+                            <div class="title texte">Votre avis? Est ce que vous avez bien suivi? Bien lu? Est ce que vous avez aimez? Dites nous tout, on veut savoir !</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--Fin Sommaire-->
+        <p>
+            <br/>
+        </p>
+        <!--Date et Heure-->
+        <div id="date">
+            <span id="date_heure"></span>
+            <script>window.onload = date_heure('date_heure');</script>
+            <canvas id="canvas_horloge" width="200" height="200" style="background-color:#333"></canvas>
+        </div>
+        <!--Fin Date et Heure-->
+        <script src="../javascript/horloge.js"></script>
+    </body>
+</html>

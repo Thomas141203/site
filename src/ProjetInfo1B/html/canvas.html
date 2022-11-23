@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="author" content="Thomas Moreau et Louise Murarasu"/>
+		<meta name="copyright" content="nom"/>
+		<meta name="keywords" lang="fr" content="loulou, toto, cool, #tropbienlavie"/>
+		<link rel="icon" href="logo.png"/>
+		<title>Canvas</title>
+        <link rel="stylesheet" type="text/css" href="../css/canvas.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/NavHeure.css"/>
+        <script src="../javascript/date_heure.js"></script>
+    </head>
+    <body onload="raz();">
+        <!--Nav Bar-->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon" onclick="history.back()"><ion-icon name="arrow-back-circle-outline"></ion-icon></span>
+                        <span class="text">Retour</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="active"><ion-icon name="document-text-outline"></ion-icon></span>
+                        <span class="text">Formulaire</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon" onclick="window.history.go(1);"><ion-icon name="arrow-forward-circle-outline">></ion-icon></span>
+                        <span class="text">Prochain</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="moon-outline"></ion-icon></span>
+                        <span class="text">Dark Mode</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <!--Fin Nav Bar-->
+
+        <p>
+            <br/>
+            <br/>
+        </p>
+
+        <!--Titre Page-->
+        <div class="titre">
+            <h1>Canvas</h1>
+        </div>
+        <!--Fin Titre Page-->
+
+        <p>
+            <br/>
+            <br/>
+        </p>
+
+        <!--Canvas-->
+        <div class="Canvas">
+            <div class="Canvas1">
+                <canvas id="canvas1" width="800" height="500"></canvas>
+                <p class="description">Dans ce canvas ci on a plein de petites formes géométriques dessiner, et en les ralliant on peut avoir de beau petit dessin grâce au système de canvas. Puis on a juste mit un système de repère avec des possibilotés de translation pour montrer que les canvas c'est bien pour les dessins mais on peut aussi s'en servir d'outils mathématique</p>
+                <form id="form1" method="post" action="mailto:toto@wanadoo.fr">
+                    <div>
+                        <fieldset id="objet">
+                            <legend>Choisir un objet à afficher parmi nos dessins</legend>
+                            <label for="rectangle">Rectangle</label>
+                            <input type="radio" id="rectangle" name="object" onchange="Rectangle();">
+                            <label for="triangle">Triangle</label>
+                            <input type="radio" id="triangle" name="object" onchange="Triangle();">
+                            <label for="logo">Jolie logo</label>
+                            <input type="radio" id="logo" name="object" onchange="Logo();">
+                            <label for="parler">Parler</label>
+                            <input type="radio" id="parler" name="object" onchange="Parler();">
+                            <label for="coeur">Coeur</label>
+                            <input type="radio" id="coeur" name="object" onchange="Coeur();">
+                            <label for="bubule">Dégradé de bubule</label>
+                            <input type="radio" id="bubule" name="object" onchange="Bubule();">
+                            <label for="pac-man">Pac Man</label>
+                            <input type="radio" id="pac-man" name="object" onchange="PacMan();">
+                            <label for="forme">Petit carré et rond</label>
+                            <input type="radio" id="forme" name="object" onchange="Forme();">
+                            <br/>
+                            <label for="color">Choisissez la couleur de votre choix</label>
+                            <input id="color" type="color" value="#FFFFFF" name="color" onchange="couleur();">
+                        </fieldset>
+                    </div>
+                    <div>
+                        <fieldset id="choixRepere">
+                            <legend> Affichage du repère</legend>
+                            <label for="repereOui">Oui</label>
+                            <input type="radio" id="repereOui" name="Repere" checked="checked" onchange="repere()">
+                            <label for="repereNon">Non</label>
+                            <input type="radio" id="repereNon" name="Repere"  onchange="repere()">
+                     </fieldset>
+                    </div>
+
+                    <div>
+                        <fieldset id="controleZoom">
+                            <legend>Contrôle du tracé des courbes</legend>
+                            <input type="range" id="zoom" name="zoom" min="0.1" max="10" step="0.1" value="1" onchange="modifEchelle();">
+                            <label for="zoom">Zoom</label>
+                            <label for="valZoom"> Valeur du zoom</label>
+                            <input type="text" id="valZoom" name="valZoom" value="1"  onchange="razZoom();">
+                            <br>
+                            <input type="range" id="TransX" name="TransX" min="-10" max="10" step="0.25"   onchange="modifEchelle();">
+                            <label for="TransX">Translation en x</label>
+                            <label for="ValTransX"> Valeur de l'abscisse</label>
+                            <input type="text" id="ValTransX" name="ValTransX" onchange="razTx();">
+                            <br>
+                            <input type="range" id="TransY" name="TransY" min="-5" max="5" step="0.25"  onchange="modifEchelle();">
+                            <label for="TransY">Translation en y</label>
+                            <label for="ValTransY"> Valeur de l'ordonnée</label>
+                            <input type="text" id="ValTransY" name="ValTransY"  onchange="razTy();">
+                        </fieldset>
+                    </div>
+                    <div>
+                        <fieldset id="razpartie">
+                            <legend>Remise à Zéro</legend>
+                            <label for="raz">Remise à zéro</label>
+                            <input type="radio" id="raz" name="raz" onclick="RAZcanvas();">
+                        </fieldset>
+                    </div>
+                </form>
+                <br/>
+            </div>
+            <div class="Canvas2">
+                <canvas id="canvas" width="800" height="500"></canvas>
+                <div class="description">
+                    Grâce au courbe de Bézier qui à l'origine on été conçu pour des pièces automibles, en informatique on peut s'en servir comme outil essentiel au dessin vectoriel qui se base sur la transcription mathématique d'objets.
+                    <br/>
+                    Vous pouvez bouger les 4 points rouge avec celui entourer en noir qui sera le début de la courbe. En appuyant après sur le bouton play vous pourrez observer l'animation que ferait une courbe de bézier.
+                    <br/>
+                    Vous pouvez ajuster la vitesse de déplacement de l'animation sur la courbe en utilisant le slider en dessous (pour bien observer l'effet de la courbe, nous prégonisons une vitesse de 1 à 3)
+                </div>
+                <button id="play-btn">Play</button>
+                <div id="speed-slider">
+                    <p>Speed <span id="slider-text">5</span></p>
+                    <input type="range" min="1" max="10" value="5" id="slider" />
+                </div>
+            </div>
+        </div>
+
+        <p>
+            <br/>
+            <br/>
+        </p>
+
+        <!--Date et Heure-->
+        <div id="date">
+            <span id="date_heure"></span>
+            <script>window.onload = date_heure('date_heure');</script>
+            <canvas id="canvas_horloge" width="200" height="200" style="background-color:#333"></canvas>
+        </div>
+        <!--Fin Date et Heure-->
+        <script src="../javascript/init.js"></script>
+        <script src="../javascript/bezier.js"></script>
+        <script src="../javascript/canvas1.js"></script>
+        <script src="../javascript/horloge.js"></script>
+    </body>
+</html>

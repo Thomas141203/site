@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+		<meta name="author" content="Thomas Moreau et Louise Murarasu"/>
+        <link rel="stylesheet" type="text/css" href="../css/NavHeure.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/Musique.css"/>
+        <script src="../javascript/date_heure.js"></script>
+        <script src="../javascript/formulaire.js"></script>
+        <title>Musique</title>
+    </head>
+    <body>
+       <!--Nav Bar-->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="Index.html">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon" onclick="history.back()"><ion-icon name="arrow-back-circle-outline"></ion-icon></span>
+                        <span class="text">Retour</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="active"><ion-icon name="musical-notes-outline"></ion-icon></span>
+                        <span class="text">Musique</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon" onclick="window.history.go(1);"><ion-icon name="arrow-forward-circle-outline">></ion-icon></span>
+                        <span class="text">Prochain</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <!--Fin Nav Bar-->
+
+        <hr>
+
+        <!--Musique-->
+        <div id="position">
+
+            <div class="cadre">
+                <h2>Rock</h2>
+                        <ul class="roman">
+                            <li>
+                                <figure>
+                                    <figcaption>Smells Like Teen Spirit de Nirvana</figcaption>
+                                    <audio controls src="../media/Nirvana_SmellsLikeTeenSpirit.mp3"></audio>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <figcaption>Seven Nation Army de The White Stripes</figcaption>
+                                    <audio controls src="../media/TheWhiteStripes_SevenNationArmy.mp3"></audio>
+                                </figure>
+                            </li>
+                        </ul>
+            </div>
+
+            <div class="cadre">
+                <h2>Pop</h2>
+                        <ul class="roman2">
+                            <li>
+                                <figure>
+                                    <figcaption>Sweet Dreams (Are Made Od This) de Annie Lennox et Dave Stewart</figcaption>
+                                    <audio controls src="../media/SweetDreams.mp3"></audio>
+                                </figure>
+                            </li>
+                        </ul>
+            </div>
+
+            <div class="cadre">
+                <h2>Electro</h2>
+                        <ul class="lettre">
+                            <li>
+                                <figure>
+                                    <figcaption>Tarte à la myrtille de Le Wanski</figcaption>
+                                    <audio controls src="../media/LeWanski_Tarte_a_la_myrtille.mp3"></audio>
+                                </figure>
+                            </li>
+                        </ul>
+            </div>
+
+            <div class="cadre">
+                <h2>Kpop</h2>
+                        <ul class="grandelettre">
+                            <li>
+                                <figure>
+                                    <figcaption>Butter de BTS</figcaption>
+                                    <audio controls src="../media/BTS.mp3"></audio>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <figcaption>God's Menu de Stray Kids</figcaption>
+                                    <audio controls src="../media/StrayKids.mp3"></audio>
+                                </figure>
+                            </li>
+                        </ul>
+            </div>
+
+            <div class="cadre">
+                <h2>Métal</h2>
+                        <ul class="image">
+                            <li>
+                                <figure>
+                                    <figcaption>Beast Of Gévaudan de Powerwolf</figcaption>
+                                    <audio controls src="../media/POWERWOLF_Beast_of_Gevaudan.mp3"></audio>
+                                </figure>
+                            </li>
+                        </ul>
+            </div>
+        </div>
+        <!--Fin Musique-->
+
+        <p>
+            <br/>
+            <hr/>
+            <br/>
+
+        <!--Formulaire Musique-->
+        <div id="cadreForm">
+            <div id="positionForm">
+                <p>Retrouver une playlist de nos musiques faites par nos soins <a href="https://www.youtube.com/playlist?list=PLHKg_HlkBt9A5lxosMp1SBMhfgfrUIxXI">Ici</a></p>
+                <form id="formulaire" method="post" action="loulouettoto@gmail.com">
+                    <fieldset>
+                        <legend>Inscrivez vous à notre newsletter sur nos musiques</legend>
+                        <p>Pour bénéficier de toute les mise à jours de notre playlist et pouvoir bénéficier de tout les changements en exclusivité, souscrivez :</p>
+                        <table>
+                            <tr>
+                                <td><label for="nom">Nom :</label></td>
+                                <td><input type="text" name="nom" id="nom" placeholder="Votre Nom"/></td>
+                                <td><div class="error invisible">Ce champ doit contenir entre dix et 50 caractères</div></td>
+                            </tr>
+                            <tr>
+                                <td><label for="prenom">Prénom :</label></td>
+                                <td><input type="text" name="prenom" id="prenom" placeholder="Votre Prénom"/></td>
+                                <td><div class="error invisible">Ce champ doit contenir entre dix et 50 caractères</div></td>
+                            </tr>
+                            <tr>
+                                <td><label for="email">E-mail :</label></td>
+                                <td><input type="email" name="email" id="email" placeholder="Votre E-mail"/></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <br/>
+                        <div class="envoyer" onclick="envoie();"><a href="#" class="neon-button">Envoyer</a></div>
+                        <br/>
+                        <button type="reset" class="bouton_sup" onclick="mise_a_zero();">Supprimer</button>
+                    </fieldset>
+                    <br/>
+                </form>
+            </div>
+        </div>
+        <!--Fin Formulaire Musique-->
+
+        <hr>
+
+        <!--Date et Heure-->
+        <div id="date">
+            <span id="date_heure"></span>
+            <script>window.onload = date_heure('date_heure');</script>
+            <canvas id="canvas_horloge" width="200" height="200" style="background-color:#333"></canvas>
+        </div>
+        <!--Fin Date et Heure-->
+        <script src="../javascript/horloge.js"></script>        
+    </body>
+</html>

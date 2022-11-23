@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="author" content="Thomas Moreau et Louise Murarasu"/>
+        <link rel="icon" href="logo.png"/>
+        <link rel="stylesheet" type="text/css" href="../css/NavHeure.css"/>
+        <link rel='stylesheet' type='text/css' href='../css/AnimeManga.css'/>
+        <script src="../javascript/date_heure.js"></script>
+        <title>Anime et Manga</title>
+        <!--Mettre le super logo le sang-->
+    </head>
+
+	<body>       
+        <!--Nav Bar-->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="Index.html">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon" onclick="history.back()"><ion-icon name="arrow-back-circle-outline"></ion-icon></span>
+                        <span class="text">Retour</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="active"><ion-icon name="film-outline"></ion-icon></span>
+                        <span class="text">Anime et Manga</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon" onclick="window.history.go(1);"><ion-icon name="arrow-forward-circle-outline">></ion-icon></span>
+                        <span class="text">Prochain</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <!--Fin Nav Bar-->
+
+        <h1 id="titre">Anime et Manga</h1>
+
+        <div class="container2">
+            <div class="element1">
+                <h1>Jujutsu Kaisen<img src="../media/jjk.png" alt="image jjk"></h1>
+                <p>Le héros de Jujutsu Kaisen, Yuji Itadori, un lycéen, se retrouve confronté aux forces occultes et est enrôlé dans une école d’exorcisme le jour où il se voit possédé par le démon millénaire Ryomen Sukuna. Si la créature lui confère des pouvoirs extraordinaires, elle le condamne également à une mort certaine puisque ses nouveaux collègues exorcistes aspirent à mettre Sukuna hors d’état de nuire.</p>
+                <video src="../media/juju_op.mp4" controls width="400" height="300"></video>
+                <!--<iframe width="500" height="300" src="https://www.youtube.com/embed/GwaRztMaoY0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+            </div>
+            <div class="element2">
+                <h1>Naruto<img src="../media/naruto.png" alt="image naruto"></h1>
+                <p>Dans le village de Konoha vit Naruto, un jeune garçon détesté et craint des villageois, du fait qu'il détient en lui Kyuubi (démon renard à neuf queues) d'une incroyable force, qui a tué un grand nombre de personnes. Le ninja le plus puissant de Konoha à l'époque, Minato Namikaze, a réussi à sceller ce démon dans le corps de Naruto. C'est ainsi que douze ans plus tard, Naruto rêve de devenir le plus grand Hokage de Konoha afin que tous le reconnaissent à sa juste valeur. Mais la route pour devenir Hokage est très longue.</p>
+                <video src="../media/naruto_op.mp4" controls width="400" height="300"></video>
+            </div>
+            <div class="element3">
+                <h1>Shingeki no Kyojin<img src="../media/snk.png" alt="image snk"></h1>
+                <p>Dans un monde ravagé par des titans mangeurs d’homme depuis plus d’un siècle, les rares survivants de l’Humanité n’ont d’autre choix pour survivre que de se barricader dans une cité-forteresse. Le jeune Eren, témoin de la mort de sa mère dévorée par un titan, n’a qu’un rêve : entrer dans le corps d’élite chargé de découvrir l’origine des Titans et les annihiler jusqu’au dernier…</p>
+                <video src="../media/snk_op.mp4" controls width="400" height="300"></video>
+            </div>
+            <div class="element4">
+                <h1>My Hero Academia<img src="../media/mha.png" alt="image mha"></h1>
+                <p>Dans un futur proche suite à une mutation génétique, 80% de la population mondiale possède des super-pouvoirs appelés "Alters". Les super-héros protègent la population mondiale face aux super-vilains qui utilisent leur Alter à des fins maléfiques. Le plus célèbre des super-héro se nomme All Might. Izuku Midoriya en est fan, et rêve d'intégrer la filière super-héroïque du lycée Yuei pour suivre les traces de son idole ainsi devenir le plus grand des super-héros. Malheureusement, Izuku ne possède pas de pouvoir.</p>
+                    
+                <video src="../media/mha_op.mp4" controls width="400" height="300"></video>
+            </div>
+            <div class="element5">
+                <h1>The Quintessential Quintuplets<img src="../media/tqq.png" alt="image tqq"></h1>
+                <p>Fûtarô, un lycéen brillant mais fauché, décroche un petit boulot de rêve : professeur particulier pour une famille fortunée. Or, le garçon déchante lorsqu'il réalise que ce n'est pas un élève qu'il va devoir gérer, mais des quintuplées aussi belles que cancres à souhait... Entre Ichika la désordonnée, Nino la protectrice, Miku la réservée, Yotsuba la joviale et Itsuki la susceptible, Fûtarô va devoir prendre son courage à deux mains pour relever le défi que représentent les sœurs Nakano!</p>
+                <video src="../media/tqq_op.mp4" controls width="400" height="300"></video>
+            </div>
+        </div>
+
+        <!--Date et Heure-->
+        <div id="date">
+            <span id="date_heure"></span>
+            <script >window.onload = date_heure('date_heure');</script>
+            <canvas id="canvas_horloge" width="200" height="200" style="background-color:#333"></canvas>
+        </div>
+        <!--Fin Date et Heure-->
+        <script  src="../javascript/horloge.js"></script>     
+	</body>
+</html>

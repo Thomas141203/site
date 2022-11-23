@@ -1,0 +1,76 @@
+body{
+    background-color: midnightblue;
+}
+#titre{
+    font-size: 70px;
+    border-radius: 10px;
+    color: darkblue;
+    background-color: orange;
+    text-align: center;
+    width: 30%;
+    margin: auto;
+}
+.cadre{
+    background-color: orange;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 3px;
+    font-size: 20px;
+}
+.Banniere{
+    width: 100%;
+}
+.site{
+    float: right;
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+}
+a:link{
+    color: turquoise;
+}
+a:visited{
+    color: powderblue;
+}
+
+/*Tableau*/
+table{
+    text-align: center;
+    border:3px solid #6495ed;
+	border-collapse:collapse;
+	width:80%;
+	margin:auto;
+    background-color:#FFFFFF;
+}
+thead, tfoot{
+    font-weight: bold;
+    text-align: center;
+	background-color:#D0E3FA;
+    height: 50px;
+}
+td{
+	text-align: center;
+    width: 220px;
+    font-family:sans-serif;
+	font-size:80%;
+	border:1px solid #6495ed;
+	padding:5px;
+}
+/*Derniere Ligne du Tableau*/
+#perso{
+    text-align: center;
+    width: auto;
+    height: 25px;
+    margin: auto;
+}
+.enregistrer{
+    border: none;
+    border-radius: 2px;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: blue;
+}

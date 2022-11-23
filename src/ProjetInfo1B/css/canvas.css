@@ -1,0 +1,105 @@
+body{
+    background-color: #2C3C54;
+}
+
+.titre{
+    text-align: center;
+    border-radius: 20px;
+    border: solid black;
+    padding: 5px;
+    margin: 5px;
+    width: 610px;
+    margin: auto;
+    background-color: #D0C0DD;
+}
+.titre, h1{
+    text-align: center;
+    font-size: 70px;
+    border-radius: 10px;
+    border: double white;
+    width: 600px;
+    margin: auto;
+}
+.description{
+    padding-left: 8%;
+    padding-right: 8%;
+}
+/*Canvas*/
+#canvas, #canvas1{
+    background-color: #f0f0f0;
+    margin-top: 20px;
+    border: 3px solid green;
+    border-radius: 10px;
+}
+.Canvas{
+    display: flex;
+    justify-content: space-around;
+}
+.Canvas1{
+    width: 50%;
+    background-color: royalblue;
+    border-radius: 5px;
+}
+.Canvas2{
+    width: 50%;
+    background-color: skyblue;
+    border-radius: 5px;
+}
+.Canvas1, .Canvas2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+/*Partie courbe de Bézier*/
+#play-btn{
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    background-color: #ff0000;
+    color: white;
+    font-size: 30px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#play-btn:hover{
+    background-color: #e60000;
+}
+#play-btn:focus{
+    box-shadow: 0 0 0 4px rgba(179, 0, 0, 0.5);
+}
+#speed-slider{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+}
+#speed-slider p{
+    margin: 0;
+}
+#slider{
+    margin-top: 10px;
+    appearance: none;
+    width: 300px;
+    border-radius: 5px;
+    height: 25px;
+    background: white;
+    outline: none;
+}
+#slider::-webkit-slider-thumb{
+    appearance: none;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #ff0000;
+    cursor: pointer;
+}
+#slider::-moz-range-thumb{
+    width: 25px;
+    border: none;
+    height: 25px;
+    border-radius: 50%;
+    background: #ff0000;
+    cursor: pointer;
+}
